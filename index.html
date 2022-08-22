@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
   <head>
     <!-- Meta-->
     <meta charset="utf-8"/>
@@ -50,40 +50,122 @@
         <div class="container-fluid">
           <!--Start Dashboard Content-->
           <!-- Start Row -->
-          <div class="row">
+          <div class="row accordion" id="globalMacroIndicators">
             <div class="col-12 col-lg-4 col-xl-4">
-              <div class="card">
-                <div class="card-header">Fed rates
+              <div class="card" id="fedRates">
+                <div class="card-header" id="fedRatesHeader" data-toggle="collapse" data-target="#fedRatesContent">
+                  Fed rates
                 </div>
-                <div class="card-body">
+                <div class="card-body collapse show" id="fedRatesContent" data-parent="#fedRates">
+                  <div class="row" id="currentFedRates">
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header">
+                          Last committee and rate
+                        </div>
+                        <div class="car-body">
+                          July 27th 2022
+                          <br>2,50 % currently
+                          <br>↗ of 0.75 % from previous FOMC
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row" id="futureFedRates">
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header">
+                          Next committee and market expectations
+                        </div>
+                        <div class="car-body">
+                          September 21st 2022
+                          <br><a href="https://www.cmegroup.com/trading/interest-rates/countdown-to-fomc.html" rel="nofollow" target="_blank">Check CME Group market sentiment/projection</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-12 col-lg-4 col-xl-4">
-              <div class="card">
-                <div class="card-header">CPI
+              <div class="card" id="CPI">
+                <div class="card-header" id="CPIHeader" data-toggle="collapse" data-target="#CPIContent">Consumer Price Index (CPI)
                 </div>
-                <div class="card-body">
+                <div class="card-body collapse show" id="CPIContent" data-parent="#CPI">
+                  <div class="row">
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header">
+                          Last committee and rate
+                        </div>
+                        <div class="car-body">
+                          August 10th 2022
+                          <br>8.5 %
+                          <br>↘ of 0.6 % from previous month
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header">
+                          Next release and consensus
+                        </div>
+                        <div class="car-body">
+                          September 13th 2022
+                          <br>Don't know yet where to find an updated consensus...
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-12 col-lg-4 col-xl-4">
-              <div class="card">
-                <div class="card-header">Job report
+              <div class="card" id="JobReport">
+                <div class="card-header" id="JobReportHeader" data-toggle="collapse" data-target="#JobReportContent">Job report
                 </div>
-                <div class="card-body">
+                <div class="card-body collapse show" id="JobReportContent" data-parent="#JobReport">
+                  <div class="row">
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header">
+                          Last committee and rate
+                        </div>
+                        <div class="car-body">
+                          August 5th 2022
+                          <br>3,50 % currently
+                          <br>↘ of 0.1 % from previous month
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header">
+                          Next release and consensus
+                        </div>
+                        <div class="car-body">
+                          September 2nd 2022
+                          <br>Don't know yet where to find an updated consensus...
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <!--End Row-->
           <!-- Start Row -->
-          <div class="row">
+          <div class="row accordion" id="stockMarketsSnP500">
             <div class="col">
               <div class="card">
-                <div class="card-header">S&P500
+                <div class="card-header" id="stockMarketsSnP500Header" data-toggle="collapse" data-target="#stockMarketsSnP500Content">S&P500
                 </div>
-                <div class="card-body" style="height: 35em;">
+                <div class="card-body collapse show" style="height: 35em;" id="stockMarketsSnP500Content" data-parent="#stockMarketsSnP500">
                   <!-- TradingView Widget BEGIN -->
                   <div class="tradingview-widget-container">
                     <div class="tradingview-widget-container__widget">
@@ -91,7 +173,7 @@
                     <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
                       {
                         "colorTheme": "dark",
-                        "dateRange": "12M",
+                        "dateRange": "1M",
                         "showChart": true,
                         "locale": "en",
                         "width": "100%",
@@ -131,7 +213,7 @@
           </div>
           <!-- End Row -->
           <!-- Start Row -->
-          <div class="row">
+          <div class="row" id="stockMarketsDetailledInIT1">
             <div class="col-md-4">
               <div class="card">
                 <div class="card-header">Apple
@@ -204,7 +286,7 @@
           </div>
           <!-- End Row -->
           <!-- Start Row -->
-          <div class="row">        
+          <div class="row" id="stockMarketsDetailledInIT2">
             <div class="col-md-6">
               <div class="card">
                 <div class="card-header">Amazon
@@ -254,7 +336,7 @@
           </div>
           <!--End Row-->
           <!-- Start Row -->
-          <div class="row">        
+          <div class="row" id="globalMacroCryptoIndicators1">
             <div class="col-12 col-lg-3 col-xl-3">
               <div class="card">
                 <div class="card-header">BTC Dominance
@@ -398,7 +480,7 @@
           </div>
           <!--End Row-->
           <!--Start Row-->
-          <div class="row">
+          <div class="row" id="globalMacroCryptoIndicators2">
             <div class="col-12 col-lg-4 col-xl-4">
               <div class="card">
                 <div class="card-header">Fear & Greed
@@ -431,7 +513,7 @@
           </div>
           <!--End Row-->
           <!--Start Row-->
-          <div class="row">
+          <div class="row" id="specificCryptoFocus1">
             <div class="col-12 col-xl-6">
               <div class="card">
                 <div class="card-header">Seedify
